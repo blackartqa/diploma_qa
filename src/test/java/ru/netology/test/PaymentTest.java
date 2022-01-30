@@ -36,7 +36,8 @@ public class PaymentTest {
     static void tearDownAll() {
         SelenideLogger.removeListener("allure");
     }
-        //Payment with debit card
+
+    //Payment with debit card
     @Test
     void shouldPayApprovedCard() {
         val cardNumber = DataHelper.getFirstCardNumber();
@@ -186,20 +187,21 @@ public class PaymentTest {
         paymentPage.fillOutFields(cardNumber, month, year, owner, cvc);
         paymentPage.waitInvalidFormat();
     }
-        //Payment with credit card
-        @Test
-        void shouldCreditApprovedCard() {
-            val cardNumber = DataHelper.getFirstCardNumber();
-            val month = DataHelper.getValidMonth();
-            val year = DataHelper.getValidYear();
-            val owner = DataHelper.getValidOwner();
-            val cvc = DataHelper.getValidCvc();
-            paymentPage.fillOutFields(cardNumber, month, year, owner, cvc);
-            paymentPage.expectApprovalFromBank();
-            val expected = DataHelper.getFirstCardExpectedStatus();
-            val actual = DbHelper.getStatusPaymentWithCredit();
-            assertEquals(expected, actual);
-        }
+
+    //Payment with credit card
+    @Test
+    void shouldCreditApprovedCard() {
+        val cardNumber = DataHelper.getFirstCardNumber();
+        val month = DataHelper.getValidMonth();
+        val year = DataHelper.getValidYear();
+        val owner = DataHelper.getValidOwner();
+        val cvc = DataHelper.getValidCvc();
+        paymentPage.fillOutFields(cardNumber, month, year, owner, cvc);
+        paymentPage.expectApprovalFromBank();
+        val expected = DataHelper.getFirstCardExpectedStatus();
+        val actual = DbHelper.getStatusPaymentWithCredit();
+        assertEquals(expected, actual);
+    }
 
     @Test
     void shouldCreditDeclinedCard() {

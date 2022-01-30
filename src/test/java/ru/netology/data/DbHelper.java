@@ -10,6 +10,7 @@ public class DbHelper {
     private static final String url = System.getProperty("url");
     private static final String user = System.getProperty("user");
     private static final String password = System.getProperty("password");
+
     private DbHelper() {
     }
 
