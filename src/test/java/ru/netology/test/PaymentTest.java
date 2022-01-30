@@ -167,6 +167,17 @@ public class PaymentTest {
     }
 
     @Test
+    void shouldPayCyrillicOwner() {
+        val cardNumber = DataHelper.getFirstCardNumber();
+        val month = DataHelper.getValidMonth();
+        val year = DataHelper.getValidYear();
+        val owner = DataHelper.getCyrillicOwner();
+        val cvc = DataHelper.getValidCvc();
+        paymentPage.fillOutFields(cardNumber, month, year, owner, cvc);
+        paymentPage.waitInvalidFormat();
+    }
+
+    @Test
     void shouldPayEmptyCvc() {
         val cardNumber = DataHelper.getFirstCardNumber();
         val month = DataHelper.getValidMonth();
@@ -184,6 +195,16 @@ public class PaymentTest {
         val year = DataHelper.getValidYear();
         val owner = DataHelper.getValidOwner();
         val cvc = DataHelper.getInvalidCvc();
+        paymentPage.fillOutFields(cardNumber, month, year, owner, cvc);
+        paymentPage.waitInvalidFormat();
+    }
+    @Test
+    void shouldPayZeroCvc() {
+        val cardNumber = DataHelper.getFirstCardNumber();
+        val month = DataHelper.getValidMonth();
+        val year = DataHelper.getValidYear();
+        val owner = DataHelper.getValidOwner();
+        val cvc = DataHelper.getZeroCvc();
         paymentPage.fillOutFields(cardNumber, month, year, owner, cvc);
         paymentPage.waitInvalidFormat();
     }
@@ -318,6 +339,17 @@ public class PaymentTest {
     }
 
     @Test
+    void shouldCreditCyrillicOwner() {
+        val cardNumber = DataHelper.getFirstCardNumber();
+        val month = DataHelper.getValidMonth();
+        val year = DataHelper.getValidYear();
+        val owner = DataHelper.getCyrillicOwner();
+        val cvc = DataHelper.getValidCvc();
+        paymentPage.fillOutFields(cardNumber, month, year, owner, cvc);
+        paymentPage.waitInvalidFormat();
+    }
+
+    @Test
     void shouldCreditEmptyCvc() {
         val cardNumber = DataHelper.getFirstCardNumber();
         val month = DataHelper.getValidMonth();
@@ -335,6 +367,16 @@ public class PaymentTest {
         val year = DataHelper.getValidYear();
         val owner = DataHelper.getValidOwner();
         val cvc = DataHelper.getInvalidCvc();
+        paymentPage.fillOutFields(cardNumber, month, year, owner, cvc);
+        paymentPage.waitInvalidFormat();
+    }
+    @Test
+    void shouldCreditZeroCvc() {
+        val cardNumber = DataHelper.getFirstCardNumber();
+        val month = DataHelper.getValidMonth();
+        val year = DataHelper.getValidYear();
+        val owner = DataHelper.getValidOwner();
+        val cvc = DataHelper.getZeroCvc();
         paymentPage.fillOutFields(cardNumber, month, year, owner, cvc);
         paymentPage.waitInvalidFormat();
     }

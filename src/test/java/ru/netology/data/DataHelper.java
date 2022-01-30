@@ -69,6 +69,9 @@ public class DataHelper {
     public static String getInvalidOwner() {
         return "AR67&^ Cher768%^&";
     }
+    public static String getCyrillicOwner() {
+        return "Артем Чернышов";
+    }
 
     public static String getEmptyOwner() {
         return "";
@@ -84,5 +87,8 @@ public class DataHelper {
 
     public static String getEmptyCvc() {
         return "";
+    }
+    public static String getZeroCvc() {
+        return "000";
     }
 }
