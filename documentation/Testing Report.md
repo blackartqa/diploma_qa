@@ -6,7 +6,13 @@
 ![Allure](https://github.com/blackartqa/diploma_qa/blob/master/documentation/report/Screenshot_1.png)  
 ![Gradle](https://github.com/blackartqa/diploma_qa/blob/master/documentation/report/Screenshot_2.png)  
 ### По результатам выполнения заведены Issues
-
+1. [Опечатка в названии города](https://github.com/blackartqa/diploma_qa/issues/1)
+2. [Неверный заголовок вкладки](https://github.com/blackartqa/diploma_qa/issues/2)
+3. [При покупке тура через declined карту появляется сообщение "Операция успешно одобрена банком"](https://github.com/blackartqa/diploma_qa/issues/3)
+4. [При вводе некорректного месяца нет сообщения об ошибке](https://github.com/blackartqa/diploma_qa/issues/4)
+5. [При вводе невалидных данных в поле "Владелец" нет сообщения об ошибке](https://github.com/blackartqa/diploma_qa/issues/5)
+6. [При вводе некорректного CVC нет сообщения об ошибке](https://github.com/blackartqa/diploma_qa/issues/6)
+7. [При вводе кириллицы в поле "Владелец" нет сообщения об ошибке](https://github.com/blackartqa/diploma_qa/issues/7)
 ### Сработавшие риски  
 1. Трудности с настройкой двух БД.
 2. Отсутствие документации по работе приложения: пришлось самостоятельно разбираться с принципами работы и предполагать ожидаемые сценарии работы.
