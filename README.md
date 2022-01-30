@@ -1,3 +1,10 @@
+# Дипломный проект профессии «Тестировщик»
+
+Дипломный проект представляет собой автоматизацию тестирования комплексного сервиса, взаимодействующего с СУБД и API Банка.  
+* [План автоматизации](https://github.com/blackartqa/diploma_qa/blob/master/documentation/plan.md)  
+* [Тест-кейсы](https://github.com/blackartqa/diploma_qa/blob/master/documentation/testrun.md)  
+* [Отчёт о тестировании](https://github.com/blackartqa/diploma_qa/blob/master/documentation/Testing%20Report.md)  
+* [Найденные ошибки](https://github.com/blackartqa/diploma_qa/issues)
 ### Запуск тестов  
 _Инициализация_  
 Запустить контейнеры командой `docker-compose up -d`  
