@@ -73,6 +73,10 @@ public class DataHelper {
         return "Артем Чернышов";
     }
 
+    public static String getLongOwnerName() {
+        return "AAAARRRTTTEEEMMMMM CCCCHHHEEERRRNNNYYYSSSHHHOOOVVVVVV";
+    }
+
     public static String getEmptyOwner() {
         return "";
     }
@@ -88,6 +92,7 @@ public class DataHelper {
     public static String getEmptyCvc() {
         return "";
     }
+
     public static String getZeroCvc() {
         return "000";
     }
