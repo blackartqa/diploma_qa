@@ -68,7 +68,7 @@ public class PaymentTest {
     }
 
     @Test
-    void shouldPayWrongCard() {
+    void shouldPayOtherCard() {
         val cardNumber = DataHelper.getCardNumberDifferent();
         val month = DataHelper.getValidMonth();
         val year = DataHelper.getValidYear();
@@ -178,6 +178,17 @@ public class PaymentTest {
     }
 
     @Test
+    void shouldPayLongOwnerName() {
+        val cardNumber = DataHelper.getFirstCardNumber();
+        val month = DataHelper.getValidMonth();
+        val year = DataHelper.getValidYear();
+        val owner = DataHelper.getLongOwnerName();
+        val cvc = DataHelper.getValidCvc();
+        paymentPage.fillOutFields(cardNumber, month, year, owner, cvc);
+        paymentPage.waitInvalidFormat();
+    }
+
+    @Test
     void shouldPayEmptyCvc() {
         val cardNumber = DataHelper.getFirstCardNumber();
         val month = DataHelper.getValidMonth();
@@ -240,7 +251,7 @@ public class PaymentTest {
     }
 
     @Test
-    void shouldCreditWrongCard() {
+    void shouldCreditOtherCard() {
         val cardNumber = DataHelper.getCardNumberDifferent();
         val month = DataHelper.getValidMonth();
         val year = DataHelper.getValidYear();
@@ -344,6 +355,17 @@ public class PaymentTest {
         val month = DataHelper.getValidMonth();
         val year = DataHelper.getValidYear();
         val owner = DataHelper.getCyrillicOwner();
+        val cvc = DataHelper.getValidCvc();
+        paymentPage.fillOutFields(cardNumber, month, year, owner, cvc);
+        paymentPage.waitInvalidFormat();
+    }
+
+    @Test
+    void shouldCreditLongOwnerName() {
+        val cardNumber = DataHelper.getFirstCardNumber();
+        val month = DataHelper.getValidMonth();
+        val year = DataHelper.getValidYear();
+        val owner = DataHelper.getLongOwnerName();
         val cvc = DataHelper.getValidCvc();
         paymentPage.fillOutFields(cardNumber, month, year, owner, cvc);
         paymentPage.waitInvalidFormat();
